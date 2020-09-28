@@ -40,9 +40,9 @@ async def on_message(message):
 
         elif message.content[1:5] == "help":
             await message.channel.send("""Currently supported commands are:
-            \n- prefix [new prefix] *Changes the prefix*
-            \n- help                *Displays this help message*
-            \n- join   [game id]    *Tells the bot to join a game* **Not currently implemented**""")
+            - prefix [new prefix] *Changes the prefix*
+            - help                *Displays this help message*
+            - join   [game id]    *Tells the bot to join a game* **Not currently implemented**""")
 
         elif message.content[1:5] == "join":
             await message.channel.send("**Not currently implemented**")
