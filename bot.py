@@ -39,6 +39,15 @@ async def on_message(message):
             await message.channel.send(f'Prefix set to `{prefix}`')
 
         elif message.content[1:5] == "help":
-            await message.channel.send(f"Currently supported commands are:\n- prefix [new prefix] \t*Changes the prefix*\n- help \t*Displays this help message*")
+            await message.channel.send("""Currently supported commands are:
+            \n- prefix [new prefix] *Changes the prefix*
+            \n- help                *Displays this help message*
+            \n- join   [game id]    *Tells the bot to join a game* **Not currently implemented**""")
+
+        elif message.content[1:5] == "join":
+            await message.channel.send("**Not currently implemented**")
+        
+        else:
+            await message.channel.send("**Command not found**")
 
 client.run(TOKEN)
