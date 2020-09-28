@@ -38,4 +38,7 @@ async def on_message(message):
             setPrefix(prefix)
             await message.channel.send(f'Prefix set to `{prefix}`')
 
+        elif message.content[1:5] == "help":
+            await message.channel.send(f"Currently supported commands are:\n- prefix [new prefix] *Changes the prefix*\n- help *Displays this help message*")
+
 client.run(TOKEN)
